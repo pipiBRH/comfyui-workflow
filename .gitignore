@@ -1,0 +1,35 @@
+# Never commit pictures: personal photos, reference crops or generated outputs
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+*.heic
+*.mp4
+*.mov
+*.zip
+
+# Face data, run state and logs (per-person face scores, prompt ids)
+**/ref_faces.json
+**/face_scores.json
+**/*_state*.json
+**/*.log
+**/rescore.txt
+**/batch*/
+**/api/
+**/crops/
+**/masks/
+**/20組*/
+**/試做/
+
+# Colab SSH key and control socket (tunnel_family.sh makes a new key when missing)
+**/colab_ssh/id_ed25519*
+**/*.sock
+
+# Model files
+*.safetensors
+*.onnx
+*.ckpt
+
+__pycache__/
+.DS_Store

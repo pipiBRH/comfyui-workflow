@@ -1,0 +1,3 @@
+#!/bin/sh
+# run a shell command on the Colab VM over the tunnel's shared SSH connection (start ./tunnel_family.sh first)
+exec ssh -S "$(cd "$(dirname "$0")" && pwd)/fam.sock" -o LogLevel=ERROR root@colab-runtime "$@"
